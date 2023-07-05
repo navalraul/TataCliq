@@ -2,9 +2,15 @@
 
 import React from 'react'
 import './Home.css'
+import { useNavigate } from 'react-router-dom'
 
 
 const Home = () => {
+  const router = useNavigate();
+
+  function goto () {
+    router('/mens')
+  }
   return (
     <div id='hscreen'>
       <div className='slide-container'>
@@ -12,7 +18,7 @@ const Home = () => {
             <img src='https://assets.tatacliq.com/medias/sys_master/images/47596855394334.gif'/>
         </div>
       </div>
-      <div className='main-img1'>
+      <div className='main-img1' onClick={goto}>
         <img src='https://assets.tatacliq.com/medias/sys_master/images/47596848218142.jpg'/>
         <img src='https://assets.tatacliq.com/medias/sys_master/images/47548678373406.jpg'/>
         <img src='https://assets.tatacliq.com/medias/sys_master/images/47445466152990.jpg'/>
