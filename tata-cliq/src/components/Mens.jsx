@@ -1,8 +1,15 @@
 
 import React from 'react';
 import './Mens.css'
+import { useNavigate } from 'react-router-dom';
 
 const Mens = () => {
+
+  const router = useNavigate();
+
+  function goto () {
+    router('/mens-multi')
+  }
   return (
     <div id='mscreen'>
       <div className='slide-container'>
@@ -10,7 +17,7 @@ const Mens = () => {
             <img src='https://assets.tatacliq.com/medias/sys_master/images/47513566183454.jpg'/>
         </div>
       </div>
-      <div className='second'>
+      <div className='second' onClick={goto}>
         <img src='https://assets.tatacliq.com/medias/sys_master/images/47396042702878.jpg'/>
         <img src='https://assets.tatacliq.com/medias/sys_master/images/47396042768414.jpg'/>
         <img src='https://assets.tatacliq.com/medias/sys_master/images/47396042833950.jpg'/>

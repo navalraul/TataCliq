@@ -8,6 +8,8 @@
     border: 1px solid black;
     background-color: rgb(33,33,33);
     display: flex;
+    position: sticky;
+    top: 0px;
 
 }
 

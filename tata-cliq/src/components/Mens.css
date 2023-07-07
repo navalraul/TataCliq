@@ -19,6 +19,7 @@
 .second >img {
     width: 10%;
     height: 70px;
+    cursor: pointer;
 }
 .third {
     width: 62%;

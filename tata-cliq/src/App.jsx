@@ -5,12 +5,14 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import Mens from './components/Mens';
+import MensMulti from './components/MensMulti';
 
 function App() {
   return (
     <div>
       <Navbar />
       <Routes>
+          <Route exact path='/mens-multi' element={ <MensMulti />} />
           <Route exact path='/mens' element={<Mens />} />
           <Route exact path='/' element={ <Home />} />
       </Routes>
