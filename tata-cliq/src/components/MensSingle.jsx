@@ -60,7 +60,17 @@ const MensSingle = () => {
                   100% Cotton, Machine wash</p>
             </div>
             <div className='card'>
-              <img src='./ScreenShot_20230709101733'/>
+              <h5>Available Offers</h5>
+              <div className='card-all'>
+                <div className='card-img'>
+                  <img src='https://assets.tatacliq.com/medias/sys_master/images/27678831411230.png'/>
+                </div>
+                <div className='card-info'>
+                  <h6>10% Instant Discount on Kotak Bank Credit Cards only.</h6>
+                  <p>Min Purchase: ₹2500 | Max Discount: ₹1000 <span>more</span> </p>
+                </div>
+              </div>
+              <p>See 5 More Offers</p>
             </div>
         </div>
       </div>
