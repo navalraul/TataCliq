@@ -2,8 +2,15 @@
 
 import React from 'react';
 import './MensMulti.css'; 
+import { useNavigate } from 'react-router-dom';
 
 const MensMulti = () => {
+
+    const router = useNavigate();
+
+    function goto() {
+        router('/mens-single')
+    }
   return (
     <div id='multi-main'>
       <div className='head'>
@@ -104,7 +111,7 @@ const MensMulti = () => {
         </div>
         <div className="main-right">
             <div className='prod'>
-                <div className='prod-img'>
+                <div className='prod-img' onClick={goto}>
                     <img src='https://img.tatacliq.com/images/i8/437Wx649H/MP000000015191655_437Wx649H_202211060047171.jpeg'/>
                 </div>
                 <div className='prod-info'>
