@@ -20,7 +20,48 @@ const MensSingle = () => {
             
         </div>
         <div className='sin-right'>
-            <div></div>
+            <div className='right-to'>
+              <i class="fa-regular fa-heart"></i><span>Popular: Recently wishlisted 64 times</span>
+            </div>
+            <div className='info'>
+              <h5>U.S.Polo.Assn.</h5>
+              <p>U.S.Polo.Assn.Dark Green Regular Fit Shirt</p>
+              <h5>MRP: ₹2299</h5>
+              <p>Inclusive of all taxes</p>
+              <span>Use MENSEOSS coupon to get 10% off on cart value 1999/- and above.</span>
+            </div>
+            <div className='rating'>
+              <div>
+                <p>2.8</p><i class="fa-solid fa-star"></i>
+                <span>5Rating</span>
+              </div>
+            </div>
+            <div className='color'>
+              <h5>Colour :<span>Dark Green</span></h5>
+              <div className='color-shirt'>
+                <img src='https://img.tatacliq.com/images/i8/97Wx144H/MP000000015191655_97Wx144H_202211060047171.jpeg'/>
+                <img src='https://img.tatacliq.com/images/i8/97Wx144H/MP000000015191660_97Wx144H_202211060047151.jpeg'/>
+                <img src='https://img.tatacliq.com/images/i8/97Wx144H/MP000000015191658_97Wx144H_202211060047201.jpeg'/>
+              </div>
+            </div>
+            <div className='size'>
+              <div className='size-text'>
+                <h5>Select Size</h5>
+                <p>Size Guide</p>
+              </div>
+              <div className='size-select'>
+                <button>S</button>
+                <button>M</button>
+                <button>L</button>
+                <button>XL</button>
+                <button>XXL</button>
+              </div>
+              <p>Model is 6'0"/185 cms and is wearing an M size
+                  100% Cotton, Machine wash</p>
+            </div>
+            <div className='card'>
+              <img src='./ScreenShot_20230709101733'/>
+            </div>
         </div>
       </div>
     </div>
