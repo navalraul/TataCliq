@@ -2,7 +2,7 @@
 #cmain {
     width: 100%;
     height: 600px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     background-color: rgb(236,236,236);
     display: flex;
     flex-direction: column;
@@ -12,7 +12,7 @@
 .header {
     width: 100%;
     height: 80px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     position: sticky;
     top: 70px;
     display: flex;
@@ -286,47 +286,96 @@
 .product-total {
     width: 30%;
     height: 300px;
-    border: 1px solid green;
+    /* border: 1px solid green; */
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    background-color: #fff;
+    border-radius: 5px;
 }
 .product-total-top {
     width: 90%;
     height: 170px;
-    border: 1px solid black;
+    border-bottom: 1px solid rgb(212, 212, 212);
     display: flex;
+    justify-content: space-between;
 }
 .product-total-top-left {
     width: 50%;
     height: 170px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 .product-total-top-left >p {
-    font-size: 13px;
+    font-size: 14px;
+    /* text-align: right; */
 }
 .product-total-top-right {
     width: 20%;
     height: 170px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 .product-total-top-right >p {
     font-size: 13px;
+    color: rgb(65, 65, 65);
+    text-align: right;
 }
 .product-total-top-right >span {
     font-size: 13px;
     font-weight: bold;
     color: green;
-    
+    text-align: right;
+    margin-left: 23px;
 }
 .product-total-bot {
-    width: 95%;
+    width: 90%;
     height: 100px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    display: flex;
+}
+.product-total-bot-left {
+    width: 40%;
+    height: 100px;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+.product-total-bot-left >h2 {
+    margin-left: 20px;
+    margin-top: 25px;
+    margin-bottom: 0px;
+    font-size: 18px;
+    color: rgb(51, 51, 51);
+}
+.product-total-bot-left >h3 {
+    margin-left: 20px;
+    margin-top: 0px;
+    font-size: 19px;
+    font-weight: lighter;
+}
+.product-total-bot-right {
+    width: 60%;
+    height: 100px;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.product-total-bot-right >button {
+    width: 75%;
+    height: 30px;
+    border-radius: 20px;
+    outline: none;
+    background-color: rgb(218,28,92);
+    border: none;
+    font-size: 13px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
 }
 .last {
     width: 85%;
     height: 50px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }

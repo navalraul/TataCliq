@@ -95,12 +95,17 @@ const Cart = () => {
                     </div>
                 </div>
                 <div className='product-total-bot'>
-                    <div className='product-total-bot-left'>1</div>
-                    <div className='product-total-bot-right'>2</div>
+                    <div className='product-total-bot-left'>
+                        <h2>Total</h2>
+                        <h3>₹2299</h3>
+                    </div>
+                    <div className='product-total-bot-right'>
+                        <button>Checkout</button>
+                    </div>
                 </div>
             </div>
         </div>
-        <div className='last'>2</div>
+        
       </div>
     </div>
   )

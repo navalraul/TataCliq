@@ -1,0 +1,38 @@
+
+#pmain {
+    width: 100%;
+    height: 750px;
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(236,236,236);
+}
+.profile-main {
+    width: 90%;
+    height: 650px;
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+}
+.profile-fi {
+    width: 20%;
+    height: 650px;
+    border: 1px solid black;
+    background-color: #fff;
+}
+.profile-se {
+    width: 55%;
+    height: 650px;
+    border: 1px solid black;
+    background-color: #fff;
+}
+.profile-th {
+    width: 20%;
+    height: 180px;
+    border: 1px solid black;
+    background-color: #fff;
+    position: sticky;
+    top: 100px;
+    bottom: 0px;
+}
