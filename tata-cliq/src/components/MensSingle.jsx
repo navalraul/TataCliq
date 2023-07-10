@@ -67,7 +67,7 @@ const MensSingle = () => {
                 </div>
                 <div className='card-info'>
                   <h6>10% Instant Discount on Kotak Bank Credit Cards only.</h6>
-                  <p>Min Purchase: ₹2500 | Max Discount: ₹1000 <span>more</span> </p>
+                  <p>Min Purchase: ₹2500 | Max Discount: ₹1000 <span>more</span></p>
                 </div>
               </div>
               <p>See 5 More Offers</p>
