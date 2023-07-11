@@ -8,7 +8,7 @@ const Profile = () => {
     <div id='pmain'>
       <div className='profile-main'>
         <div className='profile-fi'>
-            <div className='profile-fi-main'>1</div>
+            <div className='profile-fi-main'></div>
         </div>
         <div className='profile-se'></div>
         <div className='profile-th'></div>
