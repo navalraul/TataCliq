@@ -1,7 +1,7 @@
 
 #multi-main {
     width: 99.7%;
-    height: 1200px;
+    height: 1600px;
     /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
@@ -9,7 +9,7 @@
 }
 .head {
     width: 100%;
-    height: 50px;
+    height: 80px;
     /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
@@ -17,17 +17,17 @@
     align-items: center;
 }
 .head >h3 {
-    font-size: 15px;
+    font-size: 28px;
     margin-bottom: 5px;
 }
 .head >p {
-    font-size: 9px;
+    font-size: 13px;
     margin-top: 0px;
     color: rgb(107, 103, 103);
 }
 .sort {
     width: 27%;
-    height: 20px;
+    height: 30px;
     /* border: 1px solid yellow; */
     margin-left: 65%;
     display: flex;
@@ -35,7 +35,7 @@
 }
 .sort-all {
     width: 80%;
-    height: 20px;
+    height: 30px;
     border: 1px solid rgb(190, 188, 188);
     border-radius: 2px;
     display: flex;
@@ -43,7 +43,7 @@
     align-items: center;
 }
 .sort-all >p {
-    font-size: 8px;
+    font-size: 10px;
     margin-left: -10px;
     color: rgb(88, 86, 86);
 }
@@ -51,21 +51,21 @@
     height: 18px;
     outline: none;
     border: none;
-    font-size: 8px;
+    font-size: 10px;
     margin-left: -30px;
     cursor: pointer;
     color: rgb(56, 56, 56);
 }
 
 .sort-all >img {
-    width: 15px;
+    width: 20px;
 }
 .sort-img >img {
-    width: 12px;
+    width: 15px;
 }
 .main {
     width: 90%;
-    height: 1000px;
+    height: 1450px;
     /* border: 1px solid yellow; */
     margin-top: 20px;
     display: flex;
@@ -73,7 +73,7 @@
 }
 .main-left {
     width: 24%;
-    height: 680px;
+    height: 900px;
     border: 1px solid rgb(227, 226, 226);
     border-radius: 5px;
     display: flex;
@@ -83,7 +83,7 @@
 }
 .filter {
     width: 94%;
-    height: 21px;
+    height: 38px;
     /* border: 1px solid black; */
     border-bottom: 1px solid rgb(231, 230, 230);
     display: flex;
@@ -91,26 +91,26 @@
     /* margin-top: -35px; */
 }
 .filter >h5 {
-    font-size: 9.5px;
+    font-size: 17px;
     font-weight: 550;
     color: rgb(32, 32, 32);
     margin: 0px;
 }
 .filter p {
     margin: 0px;
-    font-size: 9.5px;
+    font-size: 15px;
     color: rgb(226,77,127);
     font-weight: 600;
     cursor: pointer;
 }
 .dep {
     width: 95%;
-    height: 40px;
+    height: 50px;
     border-bottom: 1px solid rgb(231, 230, 230);
     margin-top: 0px;
 }
 .dep >p {
-    font-size: 8.5px;
+    font-size: 14px;
     font-weight: bold;
     color: rgb(70, 69, 69);
     /* margin-top: 0px; */
@@ -123,42 +123,42 @@
     background-color: rgb(227, 226, 226);
     /* border-radius: 10px; */
     color: gray;
-    font-size: 8px;
+    font-size: 12px;
     margin-left: 10px;
     /* margin-top: -10px; */
 }
 .cate {
     width: 95%;
-    height: 40px;
+    height: 50px;
     border-bottom: 1px solid rgb(231, 230, 230);
 }
 .cate >p {
-    font-size: 8.5px;
+    font-size: 14px;
     font-weight: bold;
     color: rgb(70, 69, 69);
     margin: 0px;
 }
 .cate >span {
-    font-size: 8px;
+    font-size: 11px;
     margin-left: 10px;
     background-color: rgb(229, 228, 228);
     color: gray;
 }
 .cate >i {
-    font-size: 9.2px;
+    font-size: 11px;
     margin: 2px;
     color: gray;
     background-color: rgb(217, 216, 216);
 }
 .same {
     width: 95%;
-    height: 25px;
+    height: 35px;
     border-bottom: 1px solid rgb(231, 230, 230);
     display: flex;
     justify-content: space-between;
 }
 .same >p {
-    font-size: 8.5px;
+    font-size: 12px;
     font-weight: bold;
     color: rgb(70, 69, 69);
     margin-top: 5px;
@@ -168,11 +168,11 @@
     margin-top: 5px;
     color: gray;
     cursor: pointer;
-    font-size: 8px;
+    font-size: 11px;
 }
 .main-right {
     width: 72%;
-    height: 1000px;
+    height: 1450px;
     /* border: 1px solid black; */
     display: flex;
     justify-content: space-between;
@@ -180,7 +180,7 @@
 }
 .prod {
     width: 23%;
-    height: 220px;
+    height: 350px;
     /* border: 1px solid rgb(215, 212, 212); */
 }
 .prod:hover {
@@ -190,12 +190,12 @@
 }
 .prod-img {
     width: 100%;
-    height: 150px;
+    height: 240px;
     /* border: 1px solid blue; */
 }
 .prod-img >img {
     width: 100%;
-    height: 150px;
+    height: 240px;
     border-radius: 3px;
 }
 /* .prod-img >div >img {
@@ -206,13 +206,14 @@
     margin-top: -40px;
 } */
 .prod-info >h5 {
-    font-size: 9px;
+    font-size: 16px;
+    color: rgb(36, 36, 36);
     /* margin-top: 5px;
     margin-bottom: 3px; */
     margin: 5px;
 }
 .prod-info >p {
-    font-size: 8px;
+    font-size: 13.5px;
     margin-top: 3px;
     margin-bottom: 0px;
     margin-left: 5px;
@@ -220,13 +221,13 @@
     color: rgb(84, 84, 84);
 }
 .prod-info >span {
-    font-size: 9px;
+    font-size: 14px;
     font-weight: 550;
-    margin-top: 0px;
+    margin-top: 3px;
     margin-left: 5px;
     /* margin: 5px; */
 }
 .prod-info >p >i {
-    font-size: 6.5px;
+    font-size: 8px;
     color: rgb(57, 234, 57);
 }

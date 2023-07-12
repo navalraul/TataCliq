@@ -9,12 +9,16 @@ import MensMulti from './components/MensMulti';
 import MensSingle from './components/MensSingle';
 import Cart from './components/Cart';
 import Profile from './components/Profile';
+import Womens from './components/Womens';
+import Kids from './components/Kids';
 
 function App() {
   return (
     <div>
       <Navbar />
       <Routes>
+          <Route exact path='/kids' element={<Kids />} />
+          <Route exact path='/womens' element={<Womens />} />
           <Route exact path='/profile' element= {<Profile />} />
           <Route exact path='/cart' element={<Cart />} />
           <Route exact path='/mens-single' element={ <MensSingle />} />
