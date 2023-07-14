@@ -15,12 +15,16 @@ import HomeKitchen from './components/HomeKitchen';
 import Beauty from './components/Beauty';
 import Gadgets from './components/Gadgets';
 import Jwellery from './components/Jwellery';
+import Checkout from './components/Checkout';
+import Whishlist from './components/Whishlist';
 
 function App() {
   return (
     <div>
       <Navbar />
       <Routes>
+          <Route exact path='/whishlist' element={<Whishlist />} />
+          <Route exact path='/check-out' element={<Checkout />} />
           <Route exact path='/jwellery' element={<Jwellery />} />
           <Route exact path='/gadgets' element={<Gadgets />} />
           <Route exact path='/beauty' element={<Beauty />} />

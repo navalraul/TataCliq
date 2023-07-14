@@ -1,9 +1,16 @@
 
 
 import React from 'react'
-import './Navbar.css'
+import './Navbar.css';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
+
+    const router = useNavigate();
+
+    function goto () {
+        router('/whislist')
+    }
   return (
     <div id='nmain'>
         <div className='left'>
@@ -38,7 +45,7 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div className='right-bot-fo'>
-                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-regular fa-heart" onClick={goto}></i>
                     <i class="fa-solid fa-bag-shopping"></i>
                 </div>
             </div>
