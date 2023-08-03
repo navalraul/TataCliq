@@ -1,0 +1,67 @@
+
+#register-body{
+    border: 2px solid rgb(98, 0, 255);
+   height: 700px;
+   width: 100%;
+   position: absolute;
+   /* opacity: 0.25; */
+   margin-top: 37.2%;
+   color: #000000;
+   background-color: rgba(14, 13, 13, 0.25);
+}
+#register{
+    width: 35%;
+   /* height: 650px; */
+   background-color: white;
+   border: 1px solid white;
+   margin: auto;
+   margin-top: 4%;
+   text-align: center;
+   border-radius: 20px;
+   padding-bottom: 3%;
+}
+
+#register>span{
+   display: flex;
+   margin-left: 93%;
+   margin-top: 5%;
+  
+}
+#register>h1{
+   text-align: center;
+   padding-top: 5%;
+}
+
+#register>form>input{
+   font-weight: bold;
+   font-size: large;
+   color: #da1c5c;
+   margin-top: 5%;
+   width: 75%;
+   border: none;
+   border-bottom: 1px solid #dbd5d5;
+   padding-bottom: 4%;
+   outline: none;
+}
+#register>form>p{
+   width: 75%;
+   
+   /* text-align: center; */
+   margin-left: 12%;
+   font-size: 14px;
+   margin-top: 10%;
+}
+#register> form>p>b{
+   color: #da1c5c;
+}
+
+#register>form>input:last-child{
+   width: 45%; 
+   /* color: black; */
+   border-radius: 30px;
+   /* display: flex; */
+  text-align: center;
+  padding-top: 2.5% ;
+  background-color:#da1c5c ;
+  color: white;
+}

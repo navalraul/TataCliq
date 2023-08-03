@@ -8,7 +8,7 @@ const Mens = () => {
   const router = useNavigate();
 
   function goto () {
-    router('/mens-multi')
+    router('/')
   }
   return (
     <div id='mscreen'>
