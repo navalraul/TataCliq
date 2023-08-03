@@ -173,7 +173,15 @@
 .main-right {
     width: 72%;
     height: 1450px;
-    /* border: 1px solid black; */
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.pro {
+    width: 100%;
+    height: 1450px;
+    border: 1px solid red;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -181,7 +189,7 @@
 .prod {
     width: 23%;
     height: 350px;
-    /* border: 1px solid rgb(215, 212, 212); */
+    border: 1px solid rgb(215, 212, 212);
 }
 .prod:hover {
     border: 1px solid rgb(223, 223, 223);
@@ -213,7 +221,7 @@
     margin: 5px;
 }
 .prod-info >p {
-    font-size: 13.5px;
+    font-size: 15px;
     margin-top: 3px;
     margin-bottom: 0px;
     margin-left: 5px;
@@ -221,11 +229,14 @@
     color: rgb(84, 84, 84);
 }
 .prod-info >span {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 550;
     margin-top: 3px;
     margin-left: 5px;
     /* margin: 5px; */
+}
+.prod-info >p:nth-child(4) {
+    font-size: 10px;
 }
 .prod-info >p >i {
     font-size: 8px;

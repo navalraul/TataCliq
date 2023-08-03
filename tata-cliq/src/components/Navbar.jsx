@@ -17,11 +17,9 @@ const Navbar = () => {
         }
     }, [state])
 
-    console.log(userData, "userData")
+    // console.log(userData, "userData")
 
-    function goto() {
-        router('/whislist')
-    }
+    
     return (
         <div id='nmain'>
             <div className='left'>
@@ -46,7 +44,7 @@ const Navbar = () => {
                 </div>
                 <div className='right-bot'>
                     <div className='right-bot-fi'>
-                        <p onClick={ () => router('/multi-product')}>Categories</p>
+                        <p onClick={ () => router('/all-products')}>Categories</p>
                         <i class="fa-solid fa-angle-down"></i>
                     </div>
                     <div className='right-bot-se'>
@@ -60,7 +58,7 @@ const Navbar = () => {
                         </div>
                     </div>
                     <div className='right-bot-fo'>
-                        <i class="fa-regular fa-heart" onClick={goto}></i>
+                        <i class="fa-regular fa-heart" onClick={ () => router('/whishlist')}></i>
                         <i class="fa-solid fa-bag-shopping" onClick={() => router('/cart')}></i>
                     </div>
                 </div>

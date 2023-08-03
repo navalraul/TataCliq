@@ -1,49 +1,31 @@
+import { useEffect, useState } from "react";
 
 
-import React, { useEffect, useState } from 'react';
-// import './MensMulti.css'; 
-import { useNavigate } from 'react-router-dom';
+
 
 const MensMulti = () => {
 
-    const [isProductsExist, setIsProductsExist] = useState(false);
-    const [products, setProducts] = useState();
-    const router = useNavigate();
+    const [ isProductsExist, setIsProductsExist] = useState(false);
+    const [ products, setProducts] = useState();
 
-    console.log(products)
+    console.log(products);
 
-    useEffect(() => {
-        const productsFromDb = JSON.parse(localStorage.getItem("Products"))
+    useEffect( () => {
+        const productsFromDb = JSON.parse(localStorage.getItem("Products"));
+
         if (productsFromDb) {
-            console.log(productsFromDb)
             setIsProductsExist(true);
             setProducts(productsFromDb)
-            console.log(productsFromDb)
         } else {
             setIsProductsExist(false)
         }
-    }, [])
+    },[])
 
-    const redirect=(id) => {
-        // console.log(id)
-        router(`/mens-multi/${id}`)
-    }
+    
   return (
-    <div>
-        {!isProductsExist ? <div>No products</div>
-        :
-        <div style={{ display: "flex", justifyContent: "space-around", cursor: 'pointer' }}>
-                    {products && products.map((pro) => (
-                        <div onClick={ () => redirect(pro.id)} style={{ width: "23%", border: "2px solid black" }} key={pro.name}>
-                            <img src={pro.image} />
-                            <h3>Name : {pro.name}</h3>
-                            <h4>Category :{pro.category}</h4>
-                            <h4>Price : {pro.price}$</h4>
-                        </div>
-                    ))}
-                </div>
-        }
-    </div>
+   <div>
+        {!isProductsExist}
+   </div>
   )
 }
 

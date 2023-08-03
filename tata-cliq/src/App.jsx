@@ -20,6 +20,8 @@ import Whishlist from './components/Whishlist';
 import Register from './components/Register';
 import Login from './components/Login';
 import Addproduct from './components/Addproduct';
+import AllProducts from './components/AllProducts';
+import Single from './components/Single';
 // import NavbarT from './components/NavbarT';
 
 function App() {
@@ -28,6 +30,8 @@ function App() {
       <Navbar />
       
       <Routes>
+          <Route exact path='/single/:id' element={<Single />} />
+          <Route exact path='/all-products' element={<AllProducts />} />
           <Route exact path='/add-product' element={<Addproduct />} />
           <Route exact path='/login' element={<Login />} />
           <Route exact path='/register' element={<Register />} />
@@ -42,7 +46,8 @@ function App() {
           <Route exact path='/profile' element= {<Profile />} />
           <Route exact path='/cart' element={<Cart />} />
           <Route exact path='/mens-single' element={ <MensSingle />} />
-          <Route exact path='/mens-multi/:id' element={ <MensMulti />} />
+          {/* <Route exact path='/mens-multi/:id' element={ <MensMulti />} /> */}
+          
           <Route exact path='/mens' element={<Mens />} />
           <Route exact path='/' element={ <Home />} />
       </Routes>

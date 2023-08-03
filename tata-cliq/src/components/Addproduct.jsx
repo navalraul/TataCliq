@@ -1,20 +1,19 @@
+import { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom"
+import { v4 as uuidv4 } from 'uuid'
 
-import React, { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom';
-import { v4 as uuidv4} from 'uuid'
+
 
 const Addproduct = () => {
 
-
-    const [productData, setProductData] = useState({ name: "", price: "", image: "", category: "Other" });
+    const [ productData, setProductData] = useState({ name: "", price: "", image: "", category: "Other" })
 
     const router = useNavigate();
-
 
     const handleChange = (event) => {
         setProductData({ ...productData, [event.target.name]: event.target.value })
     }
-
+    
     const handleSubmit = (event) => {
         event.preventDefault();
         if (productData.name && productData.price && productData.image && productData.category) {
@@ -25,7 +24,7 @@ const Addproduct = () => {
             productsArray.push(productData);
             localStorage.setItem("Products", JSON.stringify(productsArray))
             setProductData({ name: "", price: "", image: "", category: "Other" })
-            router('/mens-multi');
+            router('/all-products');
             alert("Product added Successfully.")
         } else {
             alert("Please fill the all fields.")
@@ -38,7 +37,7 @@ const Addproduct = () => {
     }
 
     useEffect(() => {
-        const user = JSON.parse(localStorage.getItem("Current-User"))
+        const user = JSON.parse(localStorage.getItem("Current-user"))
         if (user) {
             if (user?.role == "Buyer") {
                 alert("You are not a Seller.")
@@ -50,9 +49,9 @@ const Addproduct = () => {
         }
     }, [])
 
-  return (
-    <div style={{ height: '400px',display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
-      <h1>Add Product</h1>
+    return (
+        <div style={{ height: '400px', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center' }}>
+            <h1>Add Product</h1>
             <form onSubmit={handleSubmit}>
                 <label>Product Name :</label><br />
                 <input value={productData.name} type='text' onChange={handleChange} name="name" /><br />
@@ -70,8 +69,8 @@ const Addproduct = () => {
                 <input value={productData.image} type='text' onChange={handleChange} name='image' /><br />
                 <input type='submit' value='Add Product' /><br />
             </form>
-    </div>
-  )
+        </div>
+    )
 }
 
 export default Addproduct

@@ -1,9 +1,11 @@
 
 
-import React from 'react'
+
 import './MensSingle.css'
 
+
 const MensSingle = () => {
+
   return (
     <div id='smain'>
       <div className='single-main'>
