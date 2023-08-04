@@ -30,8 +30,8 @@ function App() {
       <Navbar />
       
       <Routes>
-          <Route exact path='/single/:id' element={<Single />} />
           <Route exact path='/all-products' element={<AllProducts />} />
+          <Route exact path='/single/:id' element={<Single />} />
           <Route exact path='/add-product' element={<Addproduct />} />
           <Route exact path='/login' element={<Login />} />
           <Route exact path='/register' element={<Register />} />

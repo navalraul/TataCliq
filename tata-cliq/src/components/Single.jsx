@@ -19,6 +19,8 @@ const Single = () => {
   const { state } = useContext(AuthContext);
   const router = useNavigate();
 
+  console.log(product, "product")
+
 
   useEffect(() => {
     if (state) {

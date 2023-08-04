@@ -128,10 +128,10 @@ const AllProducts = () => {
                 <div className='main-right'>
                     {!isProductsExist ? <div>No Products</div>
                         :
-                        <div className='pro' >
+                        <div className='pro'  >
                             {products && products.map((pro) => (
-                                <div onClick={() => router(pro.id)} className='prod' key={pro.name}>
-                                    <div className='prod-img'>
+                                <div onClick={()=> router(pro.id)} className='prod' key={pro.name}>
+                                    <div className='prod-img' >
                                         <img src={pro.image} />
                                     </div>
                                     <div className='prod-info'>
