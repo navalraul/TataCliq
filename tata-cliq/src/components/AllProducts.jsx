@@ -130,7 +130,7 @@ const AllProducts = () => {
                         :
                         <div className='pro'  >
                             {products && products.map((pro) => (
-                                <div onClick={()=> router(pro.id)} className='prod' key={pro.name}>
+                                <div onClick={()=> redirect(pro.id)} className='prod' key={pro.name}>
                                     <div className='prod-img' >
                                         <img src={pro.image} />
                                     </div>
