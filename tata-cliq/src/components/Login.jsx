@@ -1,15 +1,14 @@
-
-
-
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import './Login.css'
 import { AuthContext } from './Context/AuthContext';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import { toast } from 'react-hot-toast';
 
 
 const Login = () => {
 
-    const { state, Login} = useContext(AuthContext);
+    const { state, dispatch} = useContext(AuthContext);
 
     const [ userData, setUserData ] = useState({ email: "", password: "" });
     const router = useNavigate();
@@ -18,32 +17,33 @@ const Login = () => {
         setUserData({ ...userData, [event.target.name]: event.target.value })
     }
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
-
         if (userData.email && userData.password) {
-            const users = JSON.parse(localStorage.getItem("Users"));
+            const response = await axios.post("http:localhost.4002/login", { userData });
+            if (response.data.success) {
+                dispatch ({
+                    type : "LOGIN",
+                    payload : response.data.user
+                })
+                localStorage.setItem("token", JSON.stringify(response.data.token))
 
-            var flag = false;
-            for (var i = 0; i < users.length; i++) {
-                if (users[i].email == userData.email && users[i].password == userData.password) {
-                    flag = true;
-                    break;
-                }
-            }
-            if (flag == false) {
-                return alert("Please Check your email & password")
-            } else {
-                localStorage.setItem("Current-user", JSON.stringify(users[i]));
-                Login(users[i])
-                alert("Login Successfull....");
-                setUserData({ email: "", password: "" });
+                setUserData({ email: "", password: "" })
                 router('/')
+                toast.success(response.data.message)
+            } else {
+                toast.error(response.data.message)
             }
+        } else {
+            toast.error("All fields are mandtory.")
         }
     }
 
-    
+    useEffect(() => {
+        if(state?.user?.name) {
+            'router'('/')
+        }
+    },[state])
 
     return (
         <div id='login-body'>
