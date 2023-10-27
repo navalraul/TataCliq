@@ -49,7 +49,8 @@ export const AuthProvider = ({ children }) => {
     useEffect(()=> {
         async function getCurrentUser(){
             var token = JSON.parse(localStorage.getItem("token"))
-            const response = await axios.post("http://localhost:4002/get-current-user",{token});
+            try{
+                const response = await axios.post("http://localhost:4002/get-current-user",{token});
             if (response.data?.success) {
                 dispatch({
                     type: "LOGIN",
@@ -60,6 +61,10 @@ export const AuthProvider = ({ children }) => {
                     type: "LOGOUT"
                 });
             }
+            } catch(error){
+                console.log(error)
+            }
+            
         }
         getCurrentUser();
 

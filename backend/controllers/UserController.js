@@ -54,25 +54,27 @@ export const Register = async (req, res) => {
 export const Login = async (req, res) => {
     try {
         const { email, password } = req.body.userData;
+        // console.log(email,password, "data is here")
         if (!email || !password) return res.json({ success: false, message: "All fields are mandatory..." })
 
 
         const user = await UserModal.findOne({ email })
+        console.log(user, "data is here")
         if (!user) return res.json({ success: false, message: "User not found.." })
 
-        if (user.isBlocked) {
-            return res.status(404).json({ success: false, message: "You are Blocked, Contact us." })
-        }
+        // if (user.isBlocked) {
+        //     return res.status(404).json({ success: false, message: "You are Blocked, Contact us." })
+        // }
 
         const isPasswordRight = await bcrypt.compare(password, user.password)
 
         if (isPasswordRight) {
+            const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET)
             const userObject = {
                 name: user.name,
                 email: user.email,
                 _id: user._id
             }
-            const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET)
             // console.log(token, "token here")
             return res.json({ success: true, message: "Login Success", user: userObject, token: token })
         }

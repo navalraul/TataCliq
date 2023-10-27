@@ -20,19 +20,25 @@ const Login = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         if (userData.email && userData.password) {
-            const response = await axios.post("http:localhost.4002/login", { userData });
-            if (response.data.success) {
-                dispatch ({
-                    type : "LOGIN",
-                    payload : response.data.user
-                })
-                localStorage.setItem("token", JSON.stringify(response.data.token))
+            try{
 
-                setUserData({ email: "", password: "" })
-                router('/')
-                toast.success(response.data.message)
-            } else {
-                toast.error(response.data.message)
+                const response = await axios.post("http://localhost:4002/login", { userData });
+                if (response.data.success) {
+                    dispatch ({
+                        type : "LOGIN",
+                        payload : response.data.user
+                    })
+                    localStorage.setItem("token", JSON.stringify(response.data.token))
+    
+                    setUserData({ email: "", password: "" })
+                    router('/')
+                    toast.success(response.data.message)
+                } else {
+                    toast.error(response.data.message)
+                }
+            }catch(error){
+                // toast.error(error.response.data.message)
+                console.log(error.response.data.message)
             }
         } else {
             toast.error("All fields are mandtory.")
